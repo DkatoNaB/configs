@@ -9,4 +9,14 @@ exec xrandr --output DP2 --right-of DP1 --auto
 set $leftMonitor DP1
 set $rightMonitor DP2
 
+move or delete these shi
+/usr/bin/start_aids
+/usr/bin/start_aids/start_conky_green
+/usr/bin/start_aids/start_conky_grey
+/usr/bin/start_aids/start_conky_live_green
+/usr/bin/start_aids/start_conky_live_grey
+/usr/bin/start_aids/start_conky_live_maia
+/usr/bin/start_aids/start_conky_live_solarized
+/usr/bin/start_aids/start_conky_maia
+/usr/bin/start_aids/start_conky_solarized
 
