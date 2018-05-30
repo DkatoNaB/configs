@@ -1,0 +1,12 @@
+!add this to .Xresources
+!URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+URxvt*font: xft:Inconsolata:pixelsize=18
+URxvt*boldFont: xft:Inconsolata:bold:pixelsize=18
+
+# Add this to i3.config
+# Dual monitor or wat --- ye this is a bit fked up
+exec xrandr --output DP2 --right-of DP1 --auto
+set $leftMonitor DP1
+set $rightMonitor DP2
+
+
