@@ -1,0 +1,236 @@
+export BROWSER=/usr/bin/google-chrome-stable
+
+#--------------------[ ALIAS ]------------------- begin
+export s=${HOME}/scripts
+export vm=${HOME}/Work/vm
+alias old="cd /mnt/old"
+alias hdd="cd /mnt/hdd"
+#--------------------[ CD PATHS ]------------------- begin
+
+alias p="cd ${HOME}/Work/iGO_FC6_RADNAV_3.0/"
+alias ui="cd ${HOME}/Work/iGO_FC6_RADNAV_3.0/iGO_target/target/ui_radnav_core/"
+#alias th="cd ${HOME}/ticket_helpers/"
+alias cdb="cd .."
+alias cdw="cd ${HOME}/Work"
+PATH=$PATH:~/scripts
+#--------------------[ CD PATHS ]------------------- end
+
+
+#--------------------[ FUNCTIONS ]------------------- begin
+
+cdt () 
+{
+	if [[ -z "$1" ]]; then 
+		cd ${HOME}/ticket_helpers
+	else
+	  cd ${HOME}/ticket_helpers/$1-RADNAV3
+  fi
+}
+
+lgf()
+{
+  echo "log will be overwritten! Thou u prolly late anyway"
+  fix="radnav|error|java|navngo"
+  adb logcat | egrep -i --line-buffered "$fix" > log
+}
+
+lm ()
+{
+  $s/logminer.sh "$1" "$2"
+}
+
+lt ()
+{
+  $s/logminer.sh t "$1"
+}
+
+sc ()
+{
+	# am trying to be consistent.... but damn this shit doen't allow me to be!!!!!!!!
+  scrot '%Y-%m-%d-%H-%M-%S.png' -e 'mv $f ~/ticket_helpers/screenshots/'
+}
+
+ws ()
+{
+  $s/wl.sh "$1" "s"
+}
+
+we ()
+{
+  $s/wl.sh "$1" "e"
+}
+
+fn ()
+{
+  find -name "*$1*"
+}
+
+mkcd ()
+{
+  mkdir $1 
+  cd $1
+}
+
+llg ()
+{
+	ls -al --color | grep "$1"
+}
+
+llm ()
+{
+	ls -sal --color --block-size=M
+}
+
+vb ()
+{
+	vim "+ normal G $" "${HOME}/.bashrc"
+}
+
+#--------------------[ vim ]------------------- begin
+
+vime ()
+{
+	vim "+ normal G $" "$1"
+}
+
+viml ()
+{
+  vim "+ :$1" "$2"
+}
+
+#--------------------[ vim ]------------------- end
+
+#--------------------[ vim ]------------------- begin
+grin ()
+{
+  echo "egrep --color -rin "$1""
+  egrep --color -rin "$1"
+}
+
+#--------------------[ vim ]------------------- end
+
+#--------------------[ FUNCTIONS ]------------------- end
+alias q="exit"
+alias sb="source ${HOME}/.bashrc"
+alias egrep="egrep --color"
+alias engrep="egrep -n --color"
+#alias fn="find -name"
+alias fp=$s/fp.sh
+#alias gdb="/cygdrive/e/stuffs/HELP/ticket_helpers/_GDB/android-ndk-r16b/prebuilt/windows-x86_64/bin/gdb.exe"
+alias i="$s/droid_install.sh"
+#alias l="$s/droid_adblog.sh"
+alias lm="$s/logminer.sh"
+alias q="exit"
+alias w=$s/wl.sh
+alias wh="$s/wl.sh h"
+alias wcal="$s/wl.sh cal"
+alias wi="$s/wl.sh i"
+alias cl="clear"
+alias cdv="cd $vm"
+alias cdm="cd ~/Work/radnav_master/master_ulc"
+alias cdk="cd ~/Work/radnav_master/kutyu-stuff"
+alias cdr="cd ~/Work/radnav_master/master_ulc/applications/radnav/app_radnav"
+alias ls="ls -a --color"
+alias ll="ls -salh --color"
+alias pacman="sudo pacman"
+alias du="du -h"
+# NNG stuffs
+#export NNGUTILSM_PATH=~/nngutilsm
+#echo "OMEGALUL"
+#--------------------[ ALIAS ]------------------- end
+
+#--------------------[ RADNAV MASTER QT ]------------------- begin
+
+export MAVEN_OPTS=-Xmx512m
+export ANT_HOME=/usr/share/apache-ant
+export ANDROID_NDK=/opt/android-ndk
+PATH=$PATH:/opt/android-sdk/build-tools/27.0.3/:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/build-tools:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/android-ndk:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+export ANDROID_HOME=/opt/android-sdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export ANDROID_SDK=/opt/android-sdk
+export QT_QMAKE_EXECUTABLE=/opt/android-ndk/platforms/android-15/arch-arm/usr/local/Qt-5.6.4-debug/bin/qmake
+export CMAKE_MODULE_PATH='/home/kappa/cmake-modules/qt-android-cmake;/home/kappa/cmake-modules/discordia-android-cmake;/opt/android-ndk/platforms/android-15/arch-arm/usr/local/Qt-5.6.4-debug/lib/cmake'
+#export CMAKE_MODULE_PATH2="/home/kappa/cmake-modules/qt-android-cmake;/home/kappa/cmake-modules/qt-android-cmake;/opt/android-ndk/platforms/android-15/arch-arm/usr/local/Qt-5.6.4-debug/lib/cmake"
+export CMAKE_PREFIX_PATH=/opt/android-ndk/platforms/android-15/arch-arm/usr/local/Qt-5.6.4-debug
+export VERBOSE=1
+
+# hg stuffs
+export hgradnav="https://hgcentral1/hg/proj_radnav"
+alias hglog="hg log -v -r"
+
+#--------------------[ RADNAV MASTER QT ]------------------- end
+
+#--------------------[ TEMP commands ]----------- end
+# This line should be always bottom so a man can easily add tmp functions with echo and remove them later
+
+a ()
+{
+	$s/sc.sh 439
+	png=$(ls | grep png)
+	mv -v $png ./case_1
+}
+
+export ar="katona@aujvary-d:/mnt/ssd_data/home/aujvary/src/hg/kallithea/master_ulc"
+alias sshar="ssh katona@aujvary-d"
+alias cds="cd /home/kappa/Work/radnav_master/master_ulc/sample"
+alias begone="rm -rf android applications CMakeFiles Config.java engine ffconfig"
+alias xd='cmake -DCMAKE_TOOLCHAIN_FILE=${HOME}/cmake-modules/qt-android-cmake/toolchain/android.toolchain.cmake -DTARGET_PROJECT=radnav/app_radnav -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_MAKE_PROGRAM=/usr/bin/make -DCMAKE_MODULE_PATH="$CMAKE_MODULE_PATH" .. 2>&1 | tee asd.txt'
+export fgt="radnav|error|navngo|exception"
+alias xd2="cmake -DCMAKE_TOOLCHAIN_FILE=${HOME}/cmake-modules/qt-android-cmake/toolchain/android.toolchain.cmake -DTARGET_PROJECT=radnav/app_radnav -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_MAKE_PROGRAM=/opt/android-ndk/prebuilt/linux-x86_64/bin/make -DCMAKE_MODULE_PATH=\"$CMAKE_MODULE_PATH\" .. 2>&1 | tee asd.txt"
+
+function refine()
+{
+  egrep -in "radnav|navngo|error|exception" > refined
+}
+
+function fkoff()
+{
+  adb shell pm uninstall com.navngo.igo.javaclient
+  adb shell pm clear com.navngo.igo.javaclient
+  echo "igo got rekt"  
+  cp -vr /home/kappa/Work/radnav_master/master_ulc/masikbuild/apk/bin/iGO_apk.apk $vm
+  adb shell reboot
+}
+
+function log()
+{
+  echo "adb logcat -c && adb logcat > log"
+  adb logcat -c && adb logcat > log  
+}
+
+function gg()
+{
+  echo "egrep -in \"radnav|navngo\" log > gg"
+  egrep -in "radnav|navngo" log > gg
+  vime gg
+}
+
+function update ()
+{
+  sudo pacman -Syu 
+  yaourt -Syu --aur 
+}
+
+export oldr="iGO_FC6_RADNAV_3.0/proj_radnav"
+export masr="master-radnav/proj_radnav/"
+
+function m()
+{
+  masterpath=/home/kappa/Work/master-radnav/proj_radnav/build_scripts
+  oldpath=/home/kappa/Work/iGO_FC6_RADNAV_3.0/proj_radnav/build_scripts
+  sdiff -s $masterpath/$1 $oldpath/$2
+}
+
+function eq()
+{
+  pavucontrol &
+  qpaeq &
+}
+
+function cpr()
+{
+  masterpath=/home/kappa/Work/master-radnav/proj_radnav/build_scripts
+  oldpath=/home/kappa/Work/iGO_FC6_RADNAV_3.0/proj_radnav/build_scripts
+
+  cp -v $oldpath/$1 $masterpath/$1
+}

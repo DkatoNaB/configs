@@ -1,0 +1,6 @@
+!URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
+URxvt*font: xft:Inconsolata:pixelsize=18
+URxvt*boldFont: xft:Inconsolata:bold:pixelsize=18
+
+
+
