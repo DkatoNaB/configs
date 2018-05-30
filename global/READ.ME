@@ -1,0 +1,16 @@
+cpy these lines/files to their respected position
+[equlizer settings]
+cp equalizer-presets.tdb to $HOME/.config/pulse
+echo "### Load the integrated PulseAudio equalizer and D-Bus module
+load-module module-equalizer-sink
+load-module module-dbus-protocol" >> /etc/pulse/default.pa
+
+
+
+[mime app list]
+  cp /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop
+
+vim .config/mimeapps.list
+replace moon with chrome
+
+
