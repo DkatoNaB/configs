@@ -1,0 +1,195 @@
+#!/bin/bash
+
+###############################[ READ BEFORE RUN] #####################################################
+#  phase_4() replace $FROM to a valid value; everything regardless this should be obvious! 
+#
+################################################################################################################
+
+#this block must be the first command probably
+trap "exit 1" TERM
+export TOP_PID=$$
+
+# font colors
+lr="\e[91m"   #light red    ${lr}
+GREEN="\e[32m"    # ${GREEN}
+CYAN="\e[36m"   # ${CYAN}
+YELLOW="\e[33m"   # ${YELLOW}
+ra="\e[0m"    #reset all attributes   ${ra}
+
+
+#$1 color
+#$2 text
+#$3 ${ra} if needed
+print_with_color()
+{
+  if [[ -z "$2" ]]; then
+    #echo -e "${GREEN}$1"
+    echo -e "${CYAN}$1"
+  else
+    #echo -e "$1$2${GREEN}"
+    echo -e "$1$2${CYAN}"
+  fi
+  #else  legacy
+   # echo -e "$1$2${ra}"
+} 
+
+terminate_the_fk_off()
+{
+   print_with_color "${lr}" "Something is not quite right! exit code: $1"
+   kill -s TERM $TOP_PID
+}
+
+#------------[ switches ]------------------------------- begin
+v=false # verbose
+a=false # for su as well (TODO)
+e=false # edit
+# fk_knows what could be the ${HOME} so you can use this "script-home value"
+SH_HOME=/home/kappa
+while getopts ":have" option; do
+  case $option in
+  h) echo -e "usage:\n $0 [-h] This help message \n $0 [-a] do the same for su\n $0 [-v] verbos ..."; exit ;;
+  a) a=true ;;
+  v) v=true ;;
+  e) vim ${SH_HOME}/scripts/you_are_not_prepared.sh ; exit ;;
+  \?) terminate_the_fk_off "wrong switch parameter: ${GREEN}-$OPTARG "; exit ;;
+  esac
+done
+
+if $a; then echo "-a is used! sudo requires"; fi
+if $v; then echo "-v is used! Verbose on"; fi
+#if $e; then echo "-e is used!"; fi just for consistency, the program never reach this far if -e is used
+
+# remove the options from the positional parameters
+shift $((OPTIND - 1))
+
+#------------[ switches ]------------------------------- end
+
+#---------------------------[ HELPER FUNCTIONS ]----------------------- begin
+
+#write separators
+function ws()
+{
+  if [[ $1 = "s" ]]; then
+    if $v; then print_with_color "echo -e \"#-------------------------[ $2 ]----------------------------------------- begin\n\" >> $3"; fi
+    echo -e "#-------------------------[ $2 ]----------------------------------------- begin\n" >> $3
+  fi
+  if [[ $1 = "e" ]]; then
+    if $v; then print_with_color "echo -e \"#-------------------------[ $2 ]----------------------------------------- end\n\" >> $3"; fi
+    echo -e "#-------------------------[ $2 ]----------------------------------------- end\n" >> $3
+  fi
+}
+
+#write into files
+function wf()
+{
+  if [[ -z "$3" ]]; then
+    if $v; then print_with_color "${CYAN}" "echo $1 >> $2"; fi
+    echo "$1" >> "$2"
+  else
+    if $v; then print_with_color "${CYAN}" "echo -e $1 >> $2"; fi
+    echo -e "$1" >> "$2"
+  fi
+}
+
+#---------------------------[ HELPER FUNCTIONS ]----------------------- end
+
+#aliases
+function phase_1()
+{
+  # where is profile
+  WIP=${SH_HOME}/.bashrc
+  print_with_color "Addig personal config to $WIP" 
+  #---------[ raw text ]--------- begin 
+  #echo "#-------------------------[ EXPORTS // PATHS ]----------------------------------------- begin" >> $WIP
+  ws s "EXPORTS // PATHS" $WIP
+  wf "export s=${HOME}/scripts" $WIP
+  wf "export keepo=/mnt/keepo" $WIP
+  wf "export pogchamp=/mnt/keepo" $WIP
+  #echo -e "#-------------------------[ EXPORTS // PATHS ]-------------------------------------- end\n" >> $WIP
+  ws e "EXPORTS // PATHS" $WIP
+  #echo -e "#------------------------------------[ ALIAS ]-------------------------------------- begin\n" >> $WIP
+  ws s "ALIAS" $WIP
+  wf "alias q=exit" $WIP
+  wf "alias ll=\"ls -al --color\"" $WIP
+  wf "alias sp=\"source ${HOME}/.profile\"" $WIP
+  wf "alias vp=\"vim ${HOME}/.profile\"" $WIP
+  wf "alias ..=\"cd ..\"" $WIP
+  wf "alias cl=\"clear\"" $WIP
+  wf "alias cdk=\"cd /mnt/keepo\""
+  wf "alias cdp=\"cd /mnt/pogchamp\""
+  wf "function eq()\n{\n  pavucontrol &\n  qpaeq &\n}" $WIP endl
+  ws e "ALIAS" $WIP endl
+  ws s "TMP ALIAS // FUNCTIONS" $WIP endl
+  #---------[ raw text ]--------- end  
+  
+}
+
+function phase_2()
+{
+  print_with_color "The phase requires su!!!"
+  print_with_color "Creating mnt-keepo.mount /etc/systemd/system"
+  #Path To System
+  PTS=/etc/systemd/system
+  wf "[Unit]\nDescriptor= Keepo drive\n[Mount]\nWhat=/dev/sda5\nWhere=/mnt/keepo\n[Install]\nWantedBy=multi-user.target" "$PTS/mnt-keepo.mount" formated
+  print_with_color "Creating mnt-pogchamp.mount /etc/systemd/system"
+  wf "[Unit]\nDescriptor= PogChamp drive\n[Mount]\nWhat=/dev/sda6\nWhere=/mnt/pogchamp\n[Install]\nWantedBy=multi-user.target" "$PTS/mnt-pogchamp.mount" formated
+}
+
+function phase_3()
+{
+  print_with_color "Setting up equalizer"
+  pacman -S pulseaudio-equalizer
+  pacman -S pavucontrol
+  pactl load-module module-dbus-protocol
+  wf "### Load the integrated PulseAudio equalizer and D-Bus module\nload-module module-dbusprotocol" "/etc/pulse/default.pa" formatted
+
+  # this should be loaded but maybe not string dependency
+  #  pactl load-module module-equalizer-sink
+  #wf "### Load the integrated PulseAudio equalizer and D-Bus module\nload-module module-dbusprotocol" "/etc/pulse/default.pa" formatted
+
+  # run the related stuff with eq function found in ${HOME}/.profile
+}
+
+function phase_4()
+{
+  if $v; then print_with_color "Checking if google-chrome is already installed ${YELLOW}pacman -Sy google-chrome"; fi
+  pacman -Sy google-chrome
+  if $v; then print_with_color "cp /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop"; fi
+  cp /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop.xd
+
+  # find&repalce in file inc
+  # where is file
+  WIF=${SH_HOME}/.config/mimeapps.list
+  FROM=faszp.xd
+  TO=google-chrome-stable
+
+  if $v; then print_with_color "while read line ; do echo ${YELLOW}${line//$FROM/$TO}${CYAN} ; done ${YELLOW}< $WIF > $WIF.t ; mv $WIF{.t,}${CYAN}"; fi
+  while read line ; do echo ${line//$FROM/$TO} ; done < $WIF > $WIF.t ; mv $WIF{.t,}
+
+  # The default browser, for some reason, is also set in the .profile config
+  WIF=${SH_HOME}/.profile
+  FROM="OMEGALUL"
+  TO="export BROWSER=/usr/bin/google-chrome-stable"
+  while read line ; do echo ${line//$FROM/$TO} ; done < $WIF > $WIF.t ; mv $WIF{.t,}
+}
+
+
+function main()
+{
+  print_with_color "${CYAN}" "Hello World! YOU ARE NOT PREPARED!!!"
+  print_with_color "${lr}" "PHASE 1 is a dummy; when done modifie file path" 
+  #phase_1
+  print_with_color "${lr}" "PHASE 2 is skipped; when done enable it" 
+  #phase_2
+  
+  # is skipped; when done enable it 
+  print_with_color "${lr}" "PHASE 3 is skipped; cuz package install n shit"  
+  #phase_3
+
+  print_with_color "${lr}" "PHASE 4 replacing moon browser to google-chrome-stable. IZ SKIPPED"
+  #phase_4
+
+  print_with_color "${lr}" "After ten thousand years you ARE finally PREPARED!!!"
+}
+  
+main $1 $2
