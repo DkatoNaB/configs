@@ -1,0 +1,2 @@
+pacman -S pulseaudio-equlizer
+pacman -S pavucontrol
