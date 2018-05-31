@@ -9,6 +9,16 @@ exec xrandr --output DP2 --right-of DP1 --auto
 set $leftMonitor DP1
 set $rightMonitor DP2
 
+# workspaces for each monitor
+workspace $ws1 output $leftMonitor
+workspace $ws3 output $leftMonitor
+workspace $ws5 output $leftMonitor
+workspace $ws7 output $leftMonitor
+workspace $ws2 output $rightMonitor
+workspace $ws4 output $rightMonitor
+workspace $ws6 output $rightMonitor
+workspace $ws8 output $rightMonitor
+
 move or delete these shit
 /usr/bin/start_aids
 /usr/bin/start_aids/start_conky_green
