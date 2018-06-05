@@ -100,40 +100,38 @@ viml ()
 
 #--------------------[ vim ]------------------- end
 
-#--------------------[ vim ]------------------- begin
+#--------------------[ grep ]------------------- begin
 grin ()
 {
   echo "egrep --color -rin "$1""
   egrep --color -rin "$1"
 }
 
+#--------------------[ grep ]------------------- end
+
 #--------------------[ vim ]------------------- end
 
 #--------------------[ FUNCTIONS ]------------------- end
-alias q="exit"
-alias sb="source ${HOME}/.bashrc"
-alias egrep="egrep --color"
-alias engrep="egrep -n --color"
-#alias fn="find -name"
-alias fp=$s/fp.sh
-#alias gdb="/cygdrive/e/stuffs/HELP/ticket_helpers/_GDB/android-ndk-r16b/prebuilt/windows-x86_64/bin/gdb.exe"
-alias i="$s/droid_install.sh"
-#alias l="$s/droid_adblog.sh"
-alias lm="$s/logminer.sh"
-alias q="exit"
-alias w=$s/wl.sh
-alias wh="$s/wl.sh h"
-alias wcal="$s/wl.sh cal"
-alias wi="$s/wl.sh i"
-alias cl="clear"
-alias cdv="cd $vm"
 alias cdm="cd ~/Work/radnav_master/master_ulc"
 alias cdk="cd ~/Work/radnav_master/kutyu-stuff"
 alias cdr="cd ~/Work/radnav_master/master_ulc/applications/radnav/app_radnav"
-alias ls="ls -a --color"
-alias ll="ls -salh --color"
-alias pacman="sudo pacman"
+alias cdv="cd $vm"
+alias cl="clear"
 alias du="du -h"
+alias egrep="egrep --color"
+alias engrep="egrep -n --color"
+alias fp=$s/fp.sh
+alias i="$s/droid_install.sh"
+alias ll="ls -salh"
+alias lm="$s/logminer.sh"
+alias ls="ls -a --color"
+alias pacman="sudo pacman"
+alias q="exit"
+alias sb="source ${HOME}/.bashrc"
+alias w=$s/wl.sh
+alias wcal="$s/wl.sh cal"
+alias wh="$s/wl.sh h"
+alias wi="$s/wl.sh i"
 # NNG stuffs
 #export NNGUTILSM_PATH=~/nngutilsm
 #echo "OMEGALUL"
