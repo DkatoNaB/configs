@@ -1,0 +1,251 @@
+[36madb logcat -c && adb logcat[32m
+--------- beginning of /dev/log/main
+E/usb_diagnosis( 4478): TCU device Not exist
+V/usb_diagnosis( 4478): TCU device isn't attached to host controller
+V/usb_diagnosis( 4478): Head Unit is device mode...
+--------- beginning of /dev/log/system
+E/DiagService( 2231): DTC Status : [MCH OPEN] 0, [MCH COMM] 0, [MCH ELEC] 0, [TCU OPEN] 1, [TCU COMM] 1, [TCU ELEC] 0, [LVDS TIMEOUT] 1, [LVDS COMM] 0, [LVDS ELEC] 0, [RVC COMM] 0
+D/MicomLog( 2231): RADIO : c 0 0 0 0 0 0 25 30 9 25 0 7 84 89
+D/touchmode( 3843): deliverPointerEvent. ensureTouchMode(true)
+D/touchmode( 3843): ensureTouchMode(true), current touch mode is true
+D/dalvikvm( 2231): GC_CONCURRENT freed 391K, 21% free 3104K/3916K, paused 4ms+5ms
+V/ActivityManager( 2163): aInfo's metaData = Bundle[{com.lge.ivi.app.type.SYSTEM=true}]
+I/ActivityManager( 2163): START {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x24000000 pkg=com.navngo.igo.javaclient cmp=com.navngo.igo.javaclient/.MainActivity} from pid 3843
+I/RestrictedOnDrivingObserver( 3843): onActivityStateChange state = 2
+D/touchmode( 2163): performTraversals(mFirst). ensureTouchModeLocally
+D/WindowPriorityManager( 2163): addWindowLocked, win=Window{40efada8 Starting com.navngo.igo.javaclient paused=false}
+D/touchmode( 2163): ensureTouchModeLocally(true), current touch mode is false
+D/touchmode( 2163): enterTouchMode()
+W/navngo  ( 4173): NavigationStatusService:Setting state: Initializing
+W/navngo  ( 4173): NavigationStatusService:Sending com.navngo.igo.javaclient.ACTION_NAVIGATION_STATUS broadcast, EXTRA_STATUS = Initializing
+W/StateListDrawable( 2163): updateSkinDrawables, skin=4
+W/StateListDrawable( 2163): updateSkinDrawables is ignored.
+D/touchmode( 2163): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 2163): ensureTouchModeLocally(true), current touch mode is true
+V/ActivityManager( 2163): finishRestrictedOnDrivingActivityIfNeededLocked
+D/NaviManagerStatus( 2231): Navigation status!: Initializing
+D/OpenGLRenderer( 3843): Flushing caches (mode 1)
+V/ActivityManager( 2163): mResumedActivity's metaData = Bundle[{com.lge.ivi.app.type.SYSTEM=true}]
+W/navngo  ( 4173): Config:No additional config file is present at sys.txt
+W/navngo  ( 4173): RadnavBaseActivity:createLocks -- empty method in Radnav
+W/navngo  ( 4173): Application:getScreenSizes: 886,768 --> 768,818 800,354 
+I/RestrictedOnDrivingObserver( 4173): onActivityStateChange state = 0
+I/RestrictedOnDrivingObserver( 4173): DrivingStateChangeObserver startObserving
+I/RestrictedOnDrivingObserver( 4173): DrivingStateChangeObserver checkRestricted mRestricted=false restricted=false
+W/navngo  ( 4173): Application:logBuild:BOARD = ARM2
+D/OpenGLRenderer( 3843): Flushing caches (mode 0)
+W/navngo  ( 4173): Application:logBuild:BRAND = LGE
+W/navngo  ( 4173): Application:logBuild:DEVICE = mm2014_gen30
+W/navngo  ( 4173): Application:logBuild:DISPLAY = UNKNOWN
+W/navngo  ( 4173): Application:logBuild:FINGERPRINT = LGE/mm2014_gen30/mm2014_gen30:4.0.4/UNKNOWN/.20170825.191146:user/test-keys
+W/navngo  ( 4173): Application:logBuild:HOST = steve
+W/navngo  ( 4173): RadnavBaseActivity:==== Profile checkpoint: animation starts ====
+I/RestrictedOnDrivingObserver( 4173): onActivityStateChange state = 3
+D/touchmode( 3843): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 3843): ensureTouchModeLocally(true), current touch mode is true
+W/navngo  ( 4173): Application:logBuild:ID = UNKNOWN
+W/navngo  ( 4173): Application:logBuild:MODEL = ARM2-MX6DQ
+W/navngo  ( 4173): Application:logBuild:PRODUCT = mm2014_gen30
+W/navngo  ( 4173): Application:logBuild:SERIAL = unknown
+W/navngo  ( 4173): Application:logBuild:TAGS = test-keys
+W/navngo  ( 4173): Application:logBuild:TIME = 1503655912000
+W/navngo  ( 4173): Application:logBuild:TYPE = user
+W/navngo  ( 4173): Application:logBuild:USER = gen21cm
+W/navngo  ( 4173): Application:logBuild:VERSION.INCREMENTAL = .20170825.191146
+W/navngo  ( 4173): Application:logBuild:VERSION.RELEASE = 4.0.4
+W/navngo  ( 4173): Application:logBuild:VERSION.SDK = 15
+I/RestrictedOnDrivingObserver( 4173): DrivingStateChangeObserver checkRestricted mRestricted=false restricted=false
+W/navngo  ( 4173): IgoActivity:StartloaderThread intent check: action = android.intent.action.MAIN, handled = false, flags = 603979776
+W/navngo  ( 4173): IgoActivity:processIntent: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x24000000 pkg=com.navngo.igo.javaclient cmp=com.navngo.igo.javaclient/.MainActivity }, flags = 603979776, extras = null
+W/navngo  ( 4173): IgoActivity:processIntent success: true
+W/navngo  ( 4173): Config:No additional config file is present at sys.txt
+W/navngo  ( 4173): Config:No additional config file is present at sys.txt
+D/touchmode( 4173): performTraversals(mFirst). ensureTouchModeLocally
+D/touchmode( 4173): ensureTouchModeLocally(true), current touch mode is false
+D/touchmode( 4173): enterTouchMode()
+W/navngo  ( 4173): ServerRunner:imei: null
+D/WindowPriorityManager( 2163): addWindowLocked, win=Window{40f1a368 com.navngo.igo.javaclient/com.navngo.igo.javaclient.MainActivity paused=false}
+I/IviCommandQueue( 2244): setSystemUiVisibility, visibility = 0
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviStatusBar( 2244): setSystemUiVisibility, vis=0
+I/IviNavigationBarView( 2244): setNaviLeftButtonImpl, enabled=true, buttonId=-1, buttonText=null
+I/IviNavigationBarView( 2244): setNaviCenterButtonImpl, enabled=true, buttonId=-1, buttonText=null
+I/IviNavigationBarView( 2244): setNaviRightButtonImpl, enabled=true, buttonId=-1, buttonText=null
+W/StateListDrawable( 4173): updateSkinDrawables, skin=4
+W/StateListDrawable( 4173): updateSkinDrawables is ignored.
+I/IviStatusBar( 2244): setBg, packageName=com.navngo.igo.javaclient, section1BgName=null, section3BgName=null, naviLeftBgName=null, naviCenterBgName=null, naviRightBgName=null
+D/WindowManager( 2163): onWindowFocusChanged, if (!isImeActive()) : new focus = Window{40f1a368 com.navngo.igo.javaclient/com.navngo.igo.javaclient.MainActivity paused=false}
+E/SurfaceTexture( 1978): [com.navngo.igo.javaclient/com.navngo.igo.javaclient.MainActivity] dequeueBuffer: can't dequeue multiple buffers without setting the buffer count
+D/touchmode( 4173): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 4173): ensureTouchModeLocally(true), current touch mode is true
+W/navngo  ( 4173): RadnavBaseActivity:startLocks -- empty method in Radnav (argument: false)
+W/navngo  ( 4173): RadnavBaseActivity:onLoadingFinished: Registering Radnav keyhandler
+W/navngo  ( 4173): RadnavKeyHandler:setSilentlyHandledKeys([214, 215])
+W/navngo  ( 4173): RadnavKeyHandler:setUnhandledKeys([24, 25, 164])
+W/navngo  ( 4173): RadnavKeyHandler:setUnhandledKeys([231, 232])
+W/navngo  ( 4173): RadnavKeyHandler:setUnhandledKeys([110, 229, 230])
+W/navngo  ( 4173): RadnavKeyHandler:setUnhandledKeys([218, 245, 237, 238])
+W/navngo  ( 4173): RadnavKeyHandler:setUnhandledKeys([225, 226])
+D/touchmode( 4173): WINDOW_FOCUS_CHANGED. ensureTouchModeLocally
+D/touchmode( 4173): ensureTouchModeLocally(true), current touch mode is true
+W/KEYBOARD( 2261): executeMessage  msg.what=30
+D/ViewRootImpl( 4173): onSectionChanged, oldSection=-1, section=-1, mInTouchMode=true
+D/touchmode( 4173): onSectionChanged. ensureTouchMode(true)
+D/touchmode( 4173): ensureTouchMode(true), current touch mode is true
+W/KEYBOARD( 2261): executeMessage  msg.what=20
+W/KEYBOARD( 2261): executeMessage  msg.what=45
+W/KEYBOARD( 2261): executeMessage  msg.what=45
+W/KEYBOARD( 2261): executeMessage  msg.what=32
+E/SurfaceTexture( 1978): [com.navngo.igo.javaclient/com.navngo.igo.javaclient.MainActivity] dequeueBuffer: can't dequeue multiple buffers without setting the buffer count
+D/touchmode( 4173): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 4173): ensureTouchModeLocally(true), current touch mode is true
+W/navngo  ( 4173): ServerRunner:SD ID list: FE014E4D4D4331364743A1851E05A200,FE43A1851E
+W/navngo  ( 4173): Application:registerInterfaces()
+D/WindowPriorityManager( 2163): addWindowLocked, win=Window{40f24c10 SurfaceView paused=false}
+W/navngo  ( 4173): RadnavBaseApplication:overridden registerFunctors
+W/navngo  ( 4173): IviDrAdapter:instantiated
+I/NaviManagerService( 2231): Registered PositionInfoListener: com.lge.ivi.navi.IPositionInfoListener$Stub$Proxy@40d2aeb8, size : 8
+W/navngo  ( 4173): IviDrAdapter:registered with com.lge.ivi.navi.NaviManager
+I/NaviManagerService( 2231): ========== Called getInitDataArray ==========
+W/navngo  ( 4173): GLMapView:surfaceChanged: locked holder
+I/NaviManagerService( 2231): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+D/NaviManager( 4173): registerPositionInfoListener : cu@4158e370, currentsize : 8
+D/NaviManager( 4173): getInitDataArray
+D/NaviManager( 4173): result length : 1490
+D/NaviManager( 4173): ========== Called getInitPositionDataArray ==========
+I/StatusBar.ModeController( 2244): updateIcon, current audio mode = 1
+I/StatusBar.ModeController( 2244): updateIcon, current audio mode = 1
+W/navngo  ( 4173): IviDrAdapter:loaded 370 initial events from 2017-09-27T18:50:11.550 to 18:50:48.450
+W/navngo  ( 4173): IviDrAdapter:registerFunctors
+W/navngo  ( 4173): LocationLogger:instantiated
+D/NaviManager( 4173): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+D/ActivityManager( 2163): updateStatusBarInfo, ActivityRecord=ActivityRecord{40eafc08 com.navngo.igo.javaclient/.MainActivity}, detailedStatusBar=false, title=, pageCount=0, pageIndex=0, packageName=com.navngo.igo.javaclient, titleIconName=null
+I/IviCommandQueue( 2244): setStatusBarInfo, detailedStatusBar=false, title=, pageCount=0, pageIndex=0, packageName=com.navngo.igo.javaclient, titleIconNamenull
+I/IviStatusBarView( 2244): setDisplayMode, detailedStatusBar=false
+I/IviStatusBarView( 2244): setDisplayMode, isEntryVersion=false
+I/IviStatusBarView( 2244): updateModeContainer, mModeVisible=true, audiomode=-1, mDetailedStatusBar=false, isNotiLastMode=true
+D/WindowPriorityManager( 2163): windowAnimationFinishedLocked win=Window{40f1a368 com.navngo.igo.javaclient/com.navngo.igo.javaclient.MainActivity paused=false}
+I/ActivityManager( 2163): Displayed com.navngo.igo.javaclient/.MainActivity: +198ms
+D/WindowPriorityManager( 2163): windowAnimationFinishedLocked win=Window{40f24c10 SurfaceView paused=false}
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviNavigationBarView( 2244): setNaviLeftButtonImpl, enabled=true, buttonId=-1, buttonText=null
+I/IviNavigationBarView( 2244): setNaviCenterButtonImpl, enabled=true, buttonId=-1, buttonText=null
+I/IviNavigationBarView( 2244): setNaviRightButtonImpl, enabled=true, buttonId=-1, buttonText=null
+D/dalvikvm( 4173): GC_FOR_ALLOC freed 1781K, 18% free 10869K/13176K, paused 41ms
+I/WindowPriorityManager( 2163): onResumedActivityChanged, componentName=com.navngo.igo.javaclient/.MainActivity
+I/AdasManager( 4173): registerOnStateChangeListener: l = aw@40cc8460
+I/RestrictedOnDrivingObserver( 3843): onActivityStateChange state = 1
+I/RestrictedOnDrivingObserver( 3843): DrivingStateChangeObserver stopObserving
+I/VehicleManager( 4173): registerOnStateChangeListener: l = eq@415368f8
+I/PersonalizationManager( 4173): registerOnStateChangeListener: l = eh@416302b0
+W/navngo  ( 4173): SoftwareVersion:registering functors
+W/navngo  ( 4173): LocaleChangeReceiver:registering functors
+W/navngo  ( 4173): ProfileChangeReceiver:registering functors
+W/navngo  ( 4173): IntentFunctor:android.simple_start_intent registered
+W/navngo  ( 4173): TmcTunerAdapter:instantiated
+E/navngo  ( 4173): ServerRunner:Engine start failed.
+W/navngo  ( 4173): Application:exit(true)
+I/RestrictedOnDrivingObserver( 4173): onActivityStateChange state = 2
+W/navngo  ( 4173): ServerRunner:imei: null
+I/ActivityPolicy( 2231): launchMediaActivityIfNeeded resumingPackage=com.lge.android.app.menu, taskAffinity=com.lge.android.app.menu, name=com.lge.android.app.menu.MenuActivity
+I/RestrictedOnDrivingObserver( 3843): onActivityStateChange state = 0
+V/ActivityManager( 2163): finishRestrictedOnDrivingActivityIfNeededLocked
+W/ActivityManager( 2163): Activity is finishing.ActivityRecord{40eafc08 com.navngo.igo.javaclient/.MainActivity}Check next activity
+D/OpenGLRenderer( 4173): Flushing caches (mode 1)
+I/RestrictedOnDrivingObserver( 3843): DrivingStateChangeObserver startObserving
+V/ActivityManager( 2163): mResumedActivity's metaData = Bundle[{com.lge.ivi.app.type.SYSTEM=true}]
+I/RestrictedOnDrivingObserver( 3843): DrivingStateChangeObserver checkRestricted mRestricted=false restricted=false
+I/IviSystemUIManager( 3843): setNaviButton, where=0, buttonId=2
+I/WindowSystemUiController( 3843): setNaviButton , where=0, buttonId=2, buttonText=null, enabled=true
+I/IviSystemUIManager( 3843): setNaviButton, where=2, buttonId=3
+I/WindowSystemUiController( 3843): setNaviButton , where=2, buttonId=3, buttonText=null, enabled=true
+I/IviSystemUIManager( 3843): setNaviButton, where=1, buttonText=Connect
+I/WindowSystemUiController( 3843): setNaviButton , where=1, buttonId=-10000, buttonText=Connect, enabled=false
+I/RestrictedOnDrivingObserver( 3843): onActivityStateChange state = 3
+W/navngo  ( 4173): ServerRunner:SD ID list: FE014E4D4D4331364743A1851E05A200,FE43A1851E
+W/navngo  ( 4173): Application:registerInterfaces()
+E/navngo  ( 4173): ServerRunner:Engine start failed.
+W/navngo  ( 4173): Application:exit(true)
+W/navngo  ( 4173): NavigationStatusService:Setting state: NotRunning
+W/navngo  ( 4173): NavigationStatusService:Sending com.navngo.igo.javaclient.ACTION_NAVIGATION_STATUS broadcast, EXTRA_STATUS = NotRunning
+D/NaviManagerStatus( 2231): Navigation status!: NotRunning
+I/IviStatusBar( 2244): setBg, packageName=com.lge.android.app.menu, section1BgName=null, section3BgName=null, naviLeftBgName=null, naviCenterBgName=null, naviRightBgName=null
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviCommandQueue( 2244): setSystemUiVisibility, visibility = 0
+I/IviStatusBar( 2244): setSystemUiVisibility, vis=0
+I/IviNavigationBarView( 2244): setNaviLeftButtonImpl, enabled=true, buttonId=2, buttonText=null
+I/IviNavigationBarView( 2244): setNaviCenterButtonImpl, enabled=false, buttonId=-10000, buttonText=Connect
+I/IviNavigationBarView( 2244): setNaviRightButtonImpl, enabled=true, buttonId=3, buttonText=null
+E/SurfaceTexture( 1978): [com.lge.android.app.menu/com.lge.android.app.menu.MenuActivity] dequeueBuffer: can't dequeue multiple buffers without setting the buffer count
+D/WindowManager( 2163): onWindowFocusChanged, if (!isImeActive()) : new focus = Window{40f06680 com.lge.android.app.menu/com.lge.android.app.menu.MenuActivity paused=false}
+D/touchmode( 3843): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 3843): ensureTouchModeLocally(true), current touch mode is true
+I/RestrictedOnDrivingObserver( 3843): DrivingStateChangeObserver checkRestricted mRestricted=false restricted=false
+D/touchmode( 3843): WINDOW_FOCUS_CHANGED. ensureTouchModeLocally
+D/touchmode( 3843): ensureTouchModeLocally(true), current touch mode is true
+I/IviSystemUIManager( 3843): setNaviButton, where=0, buttonId=2
+I/WindowSystemUiController( 3843): setNaviButton , where=0, buttonId=2, buttonText=null, enabled=true
+D/WindowManager( 2163): setNaviButton, where=0, buttonId=2, buttonText=null, enabled=true
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviSystemUIManager( 3843): setNaviButton, where=2, buttonId=3
+I/WindowSystemUiController( 3843): setNaviButton , where=2, buttonId=3, buttonText=null, enabled=true
+D/WindowManager( 2163): setNaviButton, where=2, buttonId=3, buttonText=null, enabled=true
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviSystemUIManager( 3843): setNaviButton, where=1, buttonText=Connect
+I/WindowSystemUiController( 3843): setNaviButton , where=1, buttonId=-10000, buttonText=Connect, enabled=false
+D/WindowManager( 2163): setNaviButton, where=1, buttonId=-10000, buttonText=Connect, enabled=false
+I/IviCommandQueue( 2244): setNaviButton, where=0, buttonId=2, buttonText=null, enabled=true
+I/IviNavigationBarView( 2244): setNaviLeftButtonImpl, enabled=true, buttonId=2, buttonText=null
+I/IviCommandQueue( 2244): setNaviButton, where=2, buttonId=3, buttonText=null, enabled=true
+I/IviNavigationBarView( 2244): setNaviRightButtonImpl, enabled=true, buttonId=3, buttonText=null
+I/IviCommandQueue( 2244): setNaviButton, where=1, buttonId=-10000, buttonText=Connect, enabled=false
+I/IviNavigationBarView( 2244): setNaviCenterButtonImpl, enabled=false, buttonId=-10000, buttonText=Connect
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+W/KEYBOARD( 2261): executeMessage  msg.what=30
+W/KEYBOARD( 2261): executeMessage  msg.what=20
+W/KEYBOARD( 2261): executeMessage  msg.what=45
+W/KEYBOARD( 2261): executeMessage  msg.what=45
+W/KEYBOARD( 2261): executeMessage  msg.what=32
+D/ViewRootImpl( 3843): onSectionChanged, oldSection=-1, section=-1, mInTouchMode=true
+D/touchmode( 3843): onSectionChanged. ensureTouchMode(true)
+D/touchmode( 3843): ensureTouchMode(true), current touch mode is true
+W/InputManagerService( 2163): Starting input on non-focused client com.android.internal.view.IInputMethodClient$Stub$Proxy@40efb5a8 (uid=10049 pid=4173)
+D/ActivityManager( 2163): updateStatusBarInfo, ActivityRecord=ActivityRecord{41043778 com.lge.android.app.menu/.MenuActivity}, detailedStatusBar=false, title=Menu, pageCount=0, pageIndex=0, packageName=com.lge.android.app.menu, titleIconName=null
+I/IviCommandQueue( 2244): setStatusBarInfo, detailedStatusBar=false, title=Menu, pageCount=0, pageIndex=0, packageName=com.lge.android.app.menu, titleIconNamenull
+I/IviStatusBarView( 2244): setDisplayMode, detailedStatusBar=false
+I/IviStatusBarView( 2244): setDisplayMode, isEntryVersion=false
+I/StatusBar.ModeController( 2244): updateIcon, current audio mode = 1
+I/StatusBar.ModeController( 2244): updateIcon, current audio mode = 1
+I/IviStatusBarView( 2244): updateModeContainer, mModeVisible=true, audiomode=-1, mDetailedStatusBar=false, isNotiLastMode=true
+D/WindowPriorityManager( 2163): windowAnimationFinishedLocked win=Window{40f06680 com.lge.android.app.menu/com.lge.android.app.menu.MenuActivity paused=false}
+D/OpenGLRenderer( 4173): Flushing caches (mode 0)
+D/touchmode( 4173): performTraversals(!mStopped). ensureTouchModeLocally
+D/touchmode( 4173): ensureTouchModeLocally(true), current touch mode is true
+I/IviNavigationBarView( 2244): setNaviLeftButtonImpl, enabled=true, buttonId=2, buttonText=null
+I/IviNavigationBarView( 2244): setNaviCenterButtonImpl, enabled=false, buttonId=-10000, buttonText=Connect
+I/FakeFocusableLinearLayout( 2244): setFakeFocus, focusView=null
+I/IviNavigationBarView( 2244): setNaviRightButtonImpl, enabled=true, buttonId=3, buttonText=null
+I/NMEA    ( 2231): $GNRMC,,V,,,,,,,,,,N*4D
+I/NMEA    ( 2231): $GNVTG,,,,,,,,,N*2E
+I/NMEA    ( 2231): $GNGGA,,,,,,0,00,99.99,,,,,,*56
+I/NMEA    ( 2231): $GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+I/NMEA    ( 2231): $GNGSA,A,1,,,,,,,,,,,,,99.99,99.99,99.99*2E
+I/NMEA    ( 2231): $GPGSV,1,1,00*79
+I/NMEA    ( 2231): $GLGSV,1,1,00*65
+I/NMEA    ( 2231): $GNGLL,,,,,,V,N*7A
+I/NMEA    ( 2231): $GNGRS,,1,,,,,,,,,,,,*7E
+I/NMEA    ( 2231): $GNGRS,,1,,,,,,,,,,,,*7E
+I/NMEA    ( 2231): $GNGST,,0.0000,,,,3750013,3750013,3750013*64
+I/WindowPriorityManager( 2163): onResumedActivityChanged, componentName=com.lge.android.app.menu/.MenuActivity
+I/DecorView( 4173): onClearFocus
+W/navngo  ( 4173): RadnavKeyHandler:key event: DOWN,  code: 247, preventDefault: false, eventHandled true
+W/navngo  ( 4173): RadnavBaseActivity:onStop: pausing iGO
+W/navngo  ( 4173): RadnavBaseActivity:stopLocks -- empty method in Radnav (argument: true)
+I/RestrictedOnDrivingObserver( 4173): onActivityStateChange state = 1
+I/RestrictedOnDrivingObserver( 4173): DrivingStateChangeObserver stopObserving
+W/navngo  ( 4173): RadnavBaseActivity:stopLocks -- empty method in Radnav (argument: true)
+E/usb_diagnosis( 4486): TCU device Not exist
+V/usb_diagnosis( 4486): TCU device isn't attached to host controller
+V/usb_diagnosis( 4486): Head Unit is device mode...
+E/DiagService( 2231): DTC Status : [MCH OPEN] 0, [MCH COMM] 0, [MCH ELEC] 0, [TCU OPEN] 1, [TCU COMM] 1, [TCU ELEC] 0, [LVDS TIMEOUT] 1, [LVDS COMM] 0, [LVDS ELEC] 0, [RVC COMM] 0
+D/MicomLog( 2231): RADIO : c 0 0 0 0 0 0 24 2c 5 e 0 7 8c bd

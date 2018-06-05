@@ -1,0 +1,17 @@
+( 2845): 1
+( 2845): 2
+( 2845): 3 
+( 2845): 4
+asd
+asdad
+
+25
+32
+56
+56
+3
+
+344 
+svgds
+fbgsf
+"cygdrive/e/stuffs/Sublime Text 3/sublime_text.exe"
