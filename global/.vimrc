@@ -1,3 +1,24 @@
+" Plugin handling stuffs 
+" https://github.com/VundleVim/Vundle.vim <-- details
+" Keep Plugin commands between vundle#begin/end.
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let g:ycm_confirm_extra_conf = 0
+" close that fking preview window
+let g:ycm_autoclose_preview_window_after_completionn = 1
+set completeopt-=preview
 "cygwin_vimrc
 set smartindent
 set showmatch
@@ -13,10 +34,10 @@ set textwidth=0
 
 set mouse=a
 
-" size(TAB) = 4 space
+" size(TAB) = 2 space
 set tabstop=2
 " converts tabs to space
-set expandtab
+"set expandtab
 
 " kappa cucc
 set scrolloff=7
@@ -37,7 +58,7 @@ set showcmd
 set ttyfast
 
 " set igonore case when searching
-" set ignorecase
+set ignorecase
 
 " always display the status line
 set laststatus=2
@@ -45,14 +66,18 @@ set laststatus=2
 "more informative status line
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
 "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
-set statusline=%f%r\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [TAB=%{tabpagenr()}]
-
+set statusline=%f%r\ [FORMAT=%{&ff}]\ [TYPE=%Y]
 " show current editing status
 set showmode
 
 " highlight current line
 set cursorline
 
+"highlight search default
+set hlsearch
+
+" set line endings to unix
+set ff=unix
 " enable backspace key to delete anything
 set backspace=indent,eol,start
 
@@ -84,8 +109,14 @@ let g:terminal_scrollback_buffer_size = 100000
 syntax on
 set t_Co=256
 set cursorline
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
+let g:rehash256 = 1
+colorscheme molokai
+"colorscheme onehalfdark
+"let g:airline_theme='onehalfdark'
+
+" extra cpp highlight options https://github.com/octol/vim-cpp-enhanced-highlight
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
 
 " this means that the tex specific settings should be loaded from ~/.vim/tex.vim
 autocmd FileType tex source ~/.config/nvim/tex.vim
@@ -101,8 +132,9 @@ map <C-c> <ESC>:w<CR>:! context %<CR>
 map <C-#> <ESC>:let @+=expand("%:p:h")<CR>
 map <C-x> <ESC>:w<CR>:! make all<CR>
 
-au BufNewFile,BufRead *.cc set syntax=cpp11
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+" tmp removed old c++ highlight, new can be found in after folder
+"au BufNewFile,BufRead *.cc set syntax=cpp11
+"au BufNewFile,BufRead *.cpp set syntax=cpp11
 au BufRead,BufNewFile *.logcat set filetype=logcat
 au BufNewFile,BufRead sys*.txt set filetype=dosini
 
@@ -118,6 +150,7 @@ au BufNewFile,BufRead sys*.txt set filetype=dosini
 "   'f'   file:   open the filename under cursor
 "   'i'   includes: find files that include the filename under cursor
 "   'd'   called: find functions that function under cursor calls
+cs add $CSCOPE_DB
 nmap <C-\>s :tab cs find s <C-R>=expand("<cword>")<CR><CR>	
 nmap <C-\>g :tab cs find g <C-R>=expand("<cword>")<CR><CR>	
 nmap <C-\>c :tab cs find c <C-R>=expand("<cword>")<CR><CR>	
@@ -165,15 +198,20 @@ command! -nargs=+ Gxml r !egrep -Hni "<args>" --include "*.xml" -r *
 command! -nargs=+ Gsh r !egrep -Hni "<args>" --include "*.sh" -r *
 command! -nargs=+ Gall r !egrep -Hni "<args>" -r *
 
-set lcs=tab:>�
+set lcs=tab:>·
 map <F4> <esc>:set list!<cr>
-map <F5> <esc>:set hlsearch!<cr>
+"map <F5> <esc>:set hlsearch!<cr>
+map <F5> <esc> :noh <cr>
 map <F6> y<esc>/<c-r>"<cr>
 map <F7> <esc>:w !diff -u % -<cr>
+
+" TODO implement page down as CTRL+D
+map <PageUp> <C-U>
+map <PageDown> <C-D>
 " replace first character in lnie to a tab + # and selects
 "map <F8> <esc>:s/^/\t#/<cr>j
 " auto indent and comments
-map <F8> <esc>==i#<esc>j
+noremap <F8> @: <cr>  
 
 " Replace code extend to ctrl + space 
 inoremap <Nul> <C-n>
@@ -225,6 +263,10 @@ tnoremap <ESC> <C-\><C-n>
 "------ SYNTAX HIGHLIGHTERS ------ begin
 
 "au BufNewFile,BufRead *.yaml,*.yml,*.txt so ~/.vim/syntax/yaml.vim
-au BufNewFile,BufRead *.cpp,*.h, so ~/.vim/syntax/cpp11.vim
+"au BufNewFile,BufRead *.cpp,*.h, so ~/.vim/syntax/cpp11.vim
 
 "------ SYNTAX HIGHLIGHTERS ------ end
+"
+"showing invisible characters"
+:set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+:set list

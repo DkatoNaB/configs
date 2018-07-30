@@ -1,8 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/kappa/Downloads/home/nmd/.config'
-let g:netrw_dirhist_2='/home/kappa/.vim/swap'
-let g:netrw_dirhist_3='/home/kappa/Work/master-radnav/proj_radnav/android/adasis/AdasisClientLib'
-let g:netrw_dirhist_4='/home/kappa/Work/iGO_FC6_RADNAV_3.0/proj_radnav/build_resources/ffconfig_subs/pc_emu_china_demo'
-let g:netrw_dirhist_5='/home/kappa/Downloads/home/nmd/.config'
-let g:netrw_dirhist_6='/home/kappa/Work/aids'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/kappa/work/vision/applications/common/headless_app/build'
