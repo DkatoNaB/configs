@@ -31,3 +31,5 @@ move or delete these shit
 /usr/bin/start_aids/start_conky_solarized
 
 
+#xorg config
+setxkbmap -option caps:escape
