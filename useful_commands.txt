@@ -1,0 +1,9 @@
+##########
+# Chroot
+##########
+sudo systemd-nspawn -bD $chroot_folder
+sudo machinectl login $chroot_folder
+
+links:
+https://wiki.archlinux.org/index.php/Systemd-nspawn
+https://wiki.archlinux.org/index.php/Chroot
